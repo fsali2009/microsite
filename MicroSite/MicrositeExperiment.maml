@@ -1,0 +1,556 @@
+<Program Name="New Campaign - Microsite" Version="1.0" DbId="0" CheckOutId="0" State="Start">
+  <Campaign Name="With Microsite" Version="1.0" Id="1" DbId="0" CheckOutId="0" State="Start">
+    <CampaignElements>
+      <CampaignElement Id="1" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="Microsite ContactList" Position="300,110" SharedCheckout="False">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="accountid" Operator="Equal" Value="micrositeExperiment" />
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="2" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Microsite" Category="Inbound" Name="Microsite" Position="600,390" SharedCheckout="False">
+        <Events />
+        <CallbackTouchPoints />
+        <ChildElements>
+          <ChildElement Id="1" DbId="0" Type="Page" IsVersion="False" Name="micrositeTest.html" Position="384,124">
+            <Properties PageType="Page" IsHomePage="True" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;title&gt;GPA Micro Site Example&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            background: #FFF;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        a {
+            color: #ff382f;
+            font-size: 18px;
+            font-stretch: ultra-condensed;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .container-fluid {
+            padding-left: 65px;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            /* Set width to 100% */
+            margin: auto;
+            min-height: 200px;
+        }
+
+        .container {
+            margin-left: 2%;
+        }
+
+        .topParagraph {
+            padding: 20px;
+        }
+
+        .right.carousel-control {
+            background: none;
+        }
+
+        .left.carousel-control {
+            background: none;
+        }
+
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav class="navbar navbar-inverse"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;div class="navbar-header"&gt;
+                &lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"&gt;
+                    &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                    &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                    &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;a class="navbar-brand" href="#"&gt;Logo&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="collapse navbar-collapse" id="myNavbar"&gt;
+                &lt;ul class="nav navbar-nav"&gt;
+                    &lt;li class="active"&gt;&lt;a href="MicrositeVers1.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="projects.html"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul class="nav navbar-nav navbar-right"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;
+                            &lt;!--&lt;span class="glyphicon glyphicon-log-in"&gt;--&gt;
+                            &lt;/span&gt;
+                        &lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div id="myCarousel" class="carousel slide" data-ride="carousel"&gt;
+        &lt;!-- Indicators --&gt;
+        &lt;ol class="carousel-indicators"&gt;
+            &lt;li data-target="#myCarousel" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+            &lt;li data-target="#myCarousel" data-slide-to="1"&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;!-- Wrapper for slides --&gt;
+        &lt;div class="carousel-inner" role="listbox"&gt;
+            &lt;div class="item active" style="max-width:  1665px;"&gt;
+                &lt;img src="https://s3.us-east-2.amazonaws.com/gpaimagehosting/images/curvedPaper1200.png"
+                    class="img-responsive" alt="GPA image Curved Paper"&gt;
+                &lt;div class="carousel-caption"&gt;
+                    &lt;h3&gt;&lt;/h3&gt;
+                    &lt;p&gt;&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="item" style="max-width: 1450px;"&gt;
+                &lt;img src="https://s3.us-east-2.amazonaws.com/gpaimagehosting/images/GPA+Sports+Image-01REVISED.jpeg"
+                    class="img-responsive" alt="GPA Spots Image"&gt;
+                &lt;div class="carousel-caption"&gt;
+                    &lt;h3&gt;&lt;/h3&gt;
+                    &lt;p&gt;&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Left and right controls --&gt;
+        &lt;a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"&gt;
+            &lt;span class="" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"&gt;
+            &lt;span class="" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Next&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="container text-left"&gt;
+        &lt;h3&gt;What We Do&lt;/h3&gt;&lt;br&gt;
+        &lt;div class="row"&gt;
+
+            &lt;div class="col-sm-6 text-align: left  topParagraph"&gt;
+
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt, mauris a auctor vestibulum,
+                    risus magna eleifend elit, quis vulputate eros risus vitae felis. Cras non massa a nibh vulputate
+                    ultrices vitae eget odio. Mauris a quam sed turpis eleifend vehicula in sit amet neque. Integer quis
+                    ultricies velit, non pulvinar quam. Vivamus malesuada, sapien sed tempor lacinia, magna risus
+                    laoreet magna, at interdum velit ligula id neque. Nullam quis pulvinar tortor, id imperdiet massa.
+                    Fusce id urna sem. Phasellus finibus mollis libero, eu fermentum quam pharetra quis. &lt;/p&gt;
+
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt, mauris a auctor vestibulum,
+                    risus magna eleifend elit, quis vulputate eros risus vitae felis. Cras non massa a nibh vulputate
+                    ultrices vitae eget odio. Mauris a quam sed turpis eleifend vehicula in sit amet neque. Integer quis
+                    ultricies velit, non pulvinar quam. Vivamus malesuada, sapien sed tempor lacinia, magna risus
+                    laoreet magna, at interdum velit ligula id neque. Nullam quis pulvinar tortor, id imperdiet massa.
+                    Fusce id urna sem. Phasellus finibus mollis libero, eu fermentum quam pharetra quis.&lt;/p&gt;
+
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt, mauris a auctor vestibulum,
+                    risus magna eleifend elit, quis vulputate eros risus vitae felis. Cras non massa a nibh vulputate
+                    ultrices vitae eget odio. Mauris a quam sed turpis eleifend vehicula in sit amet neque. Integer quis
+                    ultricies velit, non pulvinar quam. Vivamus malesuada, sapien sed tempor lacinia, magna risus
+                    laoreet magna, at interdum velit ligula id neque. Nullam quis pulvinar tortor, id imperdiet massa.
+                    Fusce id urna sem. Phasellus finibus mollis libero, eu fermentum quam pharetra quis.&lt;/p&gt;
+
+            &lt;/div&gt;
+            &lt;div class="col-sm-4"&gt;
+                &lt;img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"&gt;
+                &lt;p&gt;&lt;span class="myLinks"&gt; &lt;a href="https://gpa-innovates.com/"&gt;Project 1 - Place some preface and add
+                            link to somewhere.&lt;/a&gt;&lt;/span&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="col-sm-4"&gt;
+                &lt;img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"&gt;
+                &lt;p&gt;&lt;span class="myLinks"&gt;&lt;a href="https://gpa-innovates.com/"&gt;Project 2 - Place some preface and add
+                            link to somewhere.&lt;/a&gt;&lt;/span&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;&lt;br&gt;
+    &lt;div class="container"&gt;
+        &lt;h3&gt;What We Do&lt;/h3&gt;&lt;br&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-sm-4 col-md-12 col-lg-12 "&gt;
+
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt, mauris a auctor vestibulum,
+                    risus magna eleifend elit, quis vulputate eros risus vitae felis. Cras non massa a nibh vulputate
+                    ultrices vitae eget odio. Mauris a quam sed turpis eleifend vehicula in sit amet neque. Integer quis
+                    ultricies velit, non pulvinar quam. Vivamus malesuada, sapien sed tempor lacinia, magna risus
+                    laoreet magna, at interdum velit ligula id neque. Nullam quis pulvinar tortor, id imperdiet massa.
+                    Fusce id urna sem. Phasellus finibus mollis libero, eu fermentum quam pharetra quis. &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;&lt;br&gt;
+    &lt;footer class="container-fluid text-left footer"&gt;
+        &lt;p&gt;&amp;copy; 2019 GPA, McCook, IL &lt;/p&gt;
+
+        &lt;tr&gt;
+            &lt;td style="margin-bottom:  350px; padding-left: 25px;"&gt;
+                &lt;a href="https://twitter.com/gpa_innovates" target="_blank"&gt;&lt;img
+                        src="https://s3.us-east-2.amazonaws.com/gpaimagehosting/Social+Media+Icons/twitter-logo-button.svg"
+                        alt="Twitter link" style="width: 30px;padding-left: 10px;"&gt;&lt;/a&gt;
+                &lt;a href="https://www.instagram.com/gpa_innovates/?hl=en" target="_blank"&gt;&lt;img
+                        src="https://s3.us-east-2.amazonaws.com/gpaimagehosting/Social+Media+Icons/instagram-logo.svg"
+                        alt="Instagram link" style="width: 30px;padding-left: 10px;"&gt;&lt;/a&gt;
+                &lt;a href="https://www.facebook.com/GPA-309257453208307/" target="_blank"&gt;&lt;img
+                        src="https://s3.us-east-2.amazonaws.com/gpaimagehosting/Social+Media+Icons/facebook-logo-button.svg"
+                        alt="Facebook link" style="width: 30px;padding-left: 10px;"&gt;&lt;/a&gt;
+                &lt;a href="https://www.pinterest.com/gpainnovates/pins/" target="_blank"&gt;&lt;img
+                        src="https://s3.us-east-2.amazonaws.com/gpaimagehosting/Social+Media+Icons/pinterest-logotype-circle.svg"
+                        alt="Pinterest Link" style="width: 30px;padding-left: 10px;"&gt;&lt;/a&gt;
+
+            &lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Flow />
+            <Events />
+          </ChildElement>
+        </ChildElements>
+        <ChildConnections />
+        <Properties>
+          <BaseUrlCollection />
+          <Settings SessionTimeout="20">
+            <InvalidPurl>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Did you type your PURL correctly?&lt;/title&gt;
+
+&lt;!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+&lt;script type="text/javascript"&gt;
+window.location = "http://www.microsite-domain.com/your-page.html"
+&lt;/script&gt;
+
+... or a meta refresh:
+
+    &lt;meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/&gt;    
+
+Either method should be within your &lt;head&gt; tags.  
+
+--&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Please note that since the Contact is requesting an invalid PURL, you cannot use any variables (like ##firstname##) within your content.  --&gt;
+Are you sure you typed your Personalized URL correctly? Please try again.
+&lt;/body&gt;
+&lt;/html&gt;
+</InvalidPurl>
+            <PageNotFound>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page not found!&lt;/title&gt;
+
+&lt;!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+&lt;script type="text/javascript"&gt;
+window.location = "http://www.microsite-domain.com/your-page.html"
+&lt;/script&gt;
+
+... or a meta refresh:
+
+    &lt;meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/&gt;    
+
+Either method should be within your &lt;head&gt; tags.  
+
+--&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Please note that since the Contact is requesting a valid PURL but non-existent page, you can use any variable (like ##firstname##) within your content.  --&gt;
+Oops! ##firstname default="Sir/Madam"##,  we are really sorry but the page you requested could not be found. Please check the URL and try again.
+&lt;/body&gt;
+&lt;/html&gt;
+</PageNotFound>
+            <Error>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Something happened.&lt;/title&gt;
+
+&lt;!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+&lt;script type="text/javascript"&gt;
+window.location = "http://www.microsite-domain.com/your-page.html"
+&lt;/script&gt;
+
+... or a meta refresh:
+
+    &lt;meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/&gt;    
+
+Either method should be within your &lt;head&gt; tags.  
+
+--&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- In addition to supporting any contact variable, this page also supports a special variable: ##error##, which is a system-generated description of the error.--&gt;
+Oops! I'm sorry ##firstname default="Sir/Madam"##, something went wrong! Please contact the site administrator. The following error has occurred: ##error##
+&lt;/body&gt;
+&lt;/html&gt;
+</Error>
+          </Settings>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="3" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Microsite Email" Position="450,240" SharedCheckout="False">
+        <Events />
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Your name here</FromName>
+              <FromAddress>fran@gpa-innovates.com</FromAddress>
+              <ReplyTo>fran@gpa-innovates.com</ReplyTo>
+              <Subject>Subject line here</Subject>
+              <HtmlContent>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /&gt;
+    &lt;!-- Facebook sharing information tags --&gt;
+&lt;/head&gt;
+
+&lt;body leftmargin="0" marginheight="0" marginwidth="0" offset="0"
+    style="-webkit-text-size-adjust: none;margin: 0;padding: 0;background-color: #FFFFFF;width: 100%;" topmargin="0"&gt;
+    &lt;center&gt;
+        &lt;table border="0" cellpadding="0" cellspacing="0" height="100%" id="backgroundTable"
+            style="margin: 0;padding: 0;background-color: #FFFFFF;height: 100%;width: 100%;" width="100%"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td align="center" style="border-collapse: collapse;" valign="top"&gt;&amp;nbsp;
+                        &lt;table border="0" cellpadding="0" cellspacing="0" id="templateContainer"
+                            style="background-color: #FFFFFF;" width="900"&gt;
+                            &lt;tbody&gt;
+                                &lt;tr&gt;
+
+
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td class="headerContent"
+                                        style="border-collapse: collapse;color: #202020;font-family: Arial;font-size: 24px;font-weight: bold;line-height: 1.3;padding: 0;text-align: center;vertical-align: middle;"&gt;
+                                        &lt;!-- // Begin Module: Standard Header Image \ --&gt;
+                                        &lt;img src="https://s20.postimg.cc/rrqqud1j1/curved_Paper.png"
+                                            alt="curved paper image"
+                                            style="max-width: 900px;border: 0;height: auto;line-height: 1.3;outline: none;text-decoration: none;margin-bottom: 20px;" /&gt;
+                                        &lt;!-- // End Module: Standard Header Image \ --&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+
+                                &lt;!-- // End Template Header \ --&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td align="left" style="border-collapse: collapse;" valign="top"&gt;
+                        &lt;!-- // Begin Template Body \ --&gt;
+                        &lt;table border="0" cellpadding="0" cellspacing="0" id="templateBody" width="600"&gt;
+                            &lt;tbody&gt;
+                                &lt;tr&gt;
+                                    &lt;td class="bodyContent"
+                                        style="width: 480px;border-collapse: collapse;background-color: #FFFFFF;"
+                                        valign="top"&gt;
+                                        &lt;!-- // Begin Module: Standard Content \ --&gt;
+                                        &lt;table border="0" cellpadding="20" cellspacing="0" width="100%"&gt;
+                                            &lt;tbody&gt;
+                                                &lt;tr&gt;
+                                                    &lt;td style="border-collapse: collapse;" valign="top"&gt;
+                                                        &lt;div mc:edit="std_content00"
+                                                            style="width: 460px;color: #505050;font-family:  Arial; font-size: 16px;line-height: 1.3;text-align: left;padding-left: 15px;"&gt;
+                                                            &lt;h1 class="h1"
+                                                                style="width: 480px;color: #202020;display: block;font-family: Arial;font-size: 22px;font-weight: bold;line-height: 1.3;margin-top: 0;margin-right: 0;margin-bottom: 20px;margin-left: 0;text-align: left;"&gt;
+                                                                Join us for at PRINTING United 2020.&lt;/h1&gt;
+
+                                                            &lt;p&gt;GPA will reveal developments changing the way people
+                                                                look at the company, providing a first look at the
+                                                                lastest evolution of GPA.
+                                                            &lt;/p&gt;
+                                                            &lt;p&gt;
+                                                                We designed this year's PRINT experience to inspire -
+                                                                join us to learn how these changes will drive print
+                                                                forward.
+                                                            &lt;/p&gt;
+                                                            &lt;br /&gt;
+                                                            &lt;p style="font-weight: 700; color:#000000;"&gt; Join us Monday,
+                                                                October
+                                                                1, 2018&lt;br /&gt;
+                                                                1:00 - 2:00 p.m.&lt;br /&gt;
+                                                                McCormick Place, Room XXXX&lt;/p&gt;
+                                                            &lt;br /&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                    &lt;td colspan="2"
+                                                        style="font-weight: 900;font-size:16px;padding-left: 20px; padding-top: 10px; padding-bottom: 15px;"&gt;
+                                                        &lt;div class="choices"&gt;
+                                                            &lt;a href="http://meetgpa18.com/press/##PURL##?l=rsvp"&gt;&lt;button
+                                                                    name="rsvp" input="rsvp" type="submit"&gt;Learn more
+                                                                    about GPA&lt;/button&gt;&lt;/a&gt;
+                                                            &lt;br /&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;!-- Question two ends here --&gt;
+                                                &lt;/tr&gt;
+                                            &lt;/tbody&gt;
+                                        &lt;/table&gt;
+                                        &lt;!-- // End Module: Standard Content \ --&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                        &lt;!-- // End Template Body \ --&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td align="left" style="border-collapse: collapse;" valign="top"&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/center&gt;
+
+    &lt;form method="post"&gt;
+        &lt;table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+
+                    &lt;table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="900"&gt;
+                        &lt;tbody&gt;
+                            &lt;tr bgcolor="#ffffff"&gt;
+                                &lt;td colspan="2"
+                                    style="font-family: Arial;font-size: 16x;padding-left: 35px; font-size: 16px; color: #333333;"&gt;
+
+                                    &amp;nbsp;
+
+                                    &lt;table cellpadding="0" cellspacing="0"&gt;
+
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                    &lt;!-- Template Footer --&gt;
+
+                    &lt;table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="900"&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td colspan="2" style="height: 10px;"&gt;&amp;nbsp;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td bgcolor="#FFFFFF" colspan="2" style="padding: 15px;padding-left: 35px;"&gt;
+                                    &lt;table width="100%"&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td&gt;
+                                                    &lt;font color="#999999" face="Arial" size="2"&gt;&amp;copy; Copyright 2019
+                                                        GPA
+                                                        &lt;br /&gt;
+                                                        8701 West 47th Street STE A&lt;/font&gt;&lt;br /&gt;
+                                                    &lt;font color="#999999" face="Arial" size="2"&gt;McCook, IL 60525
+                                                        &lt;br /&gt;&lt;/font&gt;
+                                                    &lt;font color="#999999" face="Arial" size="2"&gt;Click here to &lt;a
+                                                            href="##Unsubscribe RedirectURL="
+                                                            http://studio.m.mdl.io/unsubscribe " ##"&gt;unsubscribe&lt;/a&gt;
+
+                                                    &lt;/font&gt;
+                                                &lt;/td&gt;
+
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/form&gt;
+    &lt;style&gt;
+        .choices {
+            margin-left: 19px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        button:hover {
+            color: #FFF;
+            background-color: #000;
+            border: 2px solid black;
+            letter-spacing: 1px;
+        }
+
+        button {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+            background-color: #fff;
+            border: 2px solid black;
+            letter-spacing: 1px;
+            padding: 8px 11px 8px 11px;
+        }
+    &lt;/style&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</HtmlContent>
+              <TextContent>Hi ##firstname##, this is the text email.
+
+ Join us for at PRINTING United 2020.
+
+GPA will reveal developments changing the way people look at the company, providing a first look at the lastest evolution of GPA.
+
+We designed this year's PRINT experience to inspire - join us to learn how these changes will drive print forward.
+
+Join us Monday, October 1, 2018
+1:00 - 2:00 p.m.
+McCormick Place, Room XXXX
+
+© Copyright 2019 GPA
+8701 West 47th Street STE A
+McCook, IL 60525
+
+To unsubscribe, visit ##Unsubscribe RedirectURL="http://www.yourdomain.com"##</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+    </CampaignElements>
+    <CampaignConnections>
+      <CampaignConnection StartElementId="1" EndElementId="3" />
+      <CampaignConnection StartElementId="3" EndElementId="2" />
+    </CampaignConnections>
+  </Campaign>
+  <RuleGroupSet />
+</Program>
